@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projet12.css">
+    <title>Document</title>
+</head>
+<body>
+    <picture class="bg">
+        <source media="(max-width:600px)" srcset="bg-main-mobile.png">
+        <img src="bg-main-desktop.png" alt="">
+    </picture>
+    <main>
+        <section class="a">
+            <div class="front">
+                <img src="card-logo.svg" alt="" class="logo">
+                <p id="numberCard">0000 0000 0000 0000</p>
+                <div class="infos">
+                  <p class="name" id="namevalue">Jane Appleseed</p>
+                  <p class="date" id="date"><span id="monthValue">00</span>/<span id="YearValue">00</span></p>
+                </div> 
+            </div>
+            <div class="back">
+             <p id="cvc">000</p>
+            </div>
+        </section>
+        <section class="b">
+            <form class="" id="form">
+                <label for="name">Cardholder Name</label>
+                <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed">
+                <p id="error" class="hidden">Can't be blank</p>
+                <label for="numberCardValue">Card Number</label>
+                <input type="text" name="numberCardValue" id="numberCardValue" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+                <p id="error" class="hidden">Can't be blank</p>
+                <p id="wrongFormat" class="hidden">Wrong format,number only</p>
+                <div class="date-cvc">
+                    <div class="exp-date">
+                        <label for="expDate">Exp. Date (MM/YY)</label>
+                        <input type="number" name="mm" id="month" placeholder="MM" maxlength="2">
+                        <input type="number" name="yy" id="year" placeholder="YY" maxlength="2">
+                        <p id="error" class="hidden">Can't be blank</p>
+                    </div>
+                    <div class="cvc">
+                        <label for="cvcValue">CVC</label>
+                        <input type="number" name="cvcValue" id="cvcValue" placeholder=" e.g. 123" maxlength="3">
+                        <p id="error" class="hidden">Can't be blank</p>
+                    </div>
+                </div>
+                <input type="submit" value="Confirm" id="Confirm">
+            </form>
+            <div class="thanks hidden" id="thanks">
+                <img src="icon-complete.svg" alt="">
+                <p class="thank">Thank you!</p>
+                <p class="you">We've added your card details</p>
+                <button id="thanksContinue">Continue</button>
+            </div>
+        </section>
+    </main>
+    <script src="projet12.js"></script>
+</body>
+</html>
